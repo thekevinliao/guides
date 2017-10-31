@@ -26,12 +26,14 @@ One way that type coercion is used is with the use of the or (`||`) and and (`&&
     var a = 'word';
     var b = false;
     var c = true;
+    var d = 5;
     
     console.log(a || b); // 'word'
     console.log(c || a); // true
     console.log(b || a); // 'word'
     console.log(a && c); // true
     console.log(c && a); // 'word'
+    console.log(c && d); // error
 
 As you can see, the or operator checks the first operand. If this is true or truthy, it returns it immediately (which is why we get 'word' in the first case & true in the second case). If it is not true or truthy, it returns the second operand (which is why we get 'word' in the third case). 
 
